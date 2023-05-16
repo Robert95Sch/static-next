@@ -1,0 +1,75 @@
+@import '../variables.scss';
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 60px auto;
+    max-width: 500px;
+    p {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        @include bodyText();
+    }
+
+    .contactField {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin: 10px 0;
+        }
+
+        input {
+            outline: none;
+            font-size: 1rem;
+            border: none;
+            padding: 12px 16px;
+            caret-color: #1e1e1e;
+            border-radius: 0;
+            background-color: #d9d9d9;
+        }
+
+        select {
+            outline: none;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0;
+            padding: 12px 16px 12px 16px;
+            background-color: #d9d9d9;
+            height: 43px;
+        }
+
+        textarea {
+            outline: none;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0;
+            padding: 12px 16px;
+            caret-color: #1e1e1e;
+            background-color: #d9d9d9;
+            resize: none;
+            height: 150px;
+        }
+    }
+
+    .sendBtn {
+        outline: none;
+        border: none;
+        background-color: #1e1e1e;
+        color: #f1f1f1;
+        padding: 10px 14px;
+        width:140px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin: 0 auto;
+        margin-top: 30px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #303030;
+        }
+    }
+}

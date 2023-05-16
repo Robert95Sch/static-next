@@ -1,0 +1,244 @@
+@import '../variables.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        height: 650px;
+        max-width: 1350px;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
+            height: 450px;
+            padding: 50px 50px;
+        }
+        @media screen and (min-width: 1200px) {
+            padding: 60px 50px;
+        }
+
+        .left {
+            flex: 1;
+            padding: 2rem 0;
+            @media screen and (min-width: 768px) {
+                flex: 0.55;
+                padding: 0;
+            }
+            @media screen and (min-width: 1200px) {
+                flex: 0.5;
+                margin-top: .5rem;
+            }
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                width: 75%;
+                margin: 0 auto;
+                @media screen and (min-width: 768px) {
+                    align-items: flex-start;
+                    text-align: left;
+                    margin: 0;
+                    width: 85%;
+                }
+                @media screen and (min-width: 1200px) {
+                    width: 93%;
+                }
+                h1 {
+                    font-size: 26px;
+                    letter-spacing: 0.4px;
+                    font-weight: 600;
+                    width: 95%;
+                    line-height: 1.1;
+                    color: $primaryDark;
+                    @media screen and (min-width: 768px) {
+                        font-size: 28px;
+                        
+                    }
+                    @media screen and (min-width: 1200px) {
+                        font-size: 2.15rem;
+                    }
+                    @media screen and (min-width: 1200px) {
+                        width: 75%;
+                    }
+                }
+
+                p {
+                    margin-top: 1rem;
+                    width: 83%;
+                    @include bodyText();
+                    @media screen and (min-width: 768px) {
+                        width: 100%;
+                    }
+                    @media screen and (min-width: 1200px) {
+                        width: 85%;
+                    }
+
+                }
+
+                button {
+                    outline: none;
+                    border: none;
+                    background-color: $primaryDark;
+                    font-weight: 700;
+                    padding: 10px 20px;
+                    border-radius: 7px;
+                    margin-top: 1.5rem;
+                    font-size: 16px;
+                    color: white;
+                    cursor: pointer;
+                    letter-spacing: 0.5px;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 1.05rem;
+                        width: fit-content;
+                        padding: 8px 14px;
+                    }
+
+                    @media screen and (min-width: 1200px) {
+                        margin-top: 1.5rem;
+                        font-size: 1.1rem;
+                        padding: 10px 16px;
+                        width: 200px;
+                        max-width: 150px;
+                    }
+                }
+            }
+
+            .contents {
+                display: flex;
+                flex: 1;
+                margin-top: 2.5rem;
+                @media screen and (min-width: 768px) {
+                    width: 100%;
+                }
+                @media screen and (min-width: 1200px) {
+                    margin-top: 5.5rem;
+                }
+                @media screen and (min-width: 1200px) {
+                    width: 97%;
+                }
+                .info {
+                    flex: 0.5;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    @media screen and (min-width: 768px) {
+                        align-items: flex-start;
+                        text-align: left;
+                    }
+                    .iconHolder {
+                        width: 42px;
+                        height: 37px;
+                        border-radius: 10px;
+                        background-color: $primaryDark;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @media screen and (min-width: 1200px) {
+                            width: 50px;
+                            height: 46px;
+                        }
+                        svg {
+                            stroke: white;
+                            color: white;
+                            stroke-width: 1.8;
+                            font-size: 1.5rem;
+                            @media screen and (min-width: 1200px) {
+                                font-size: 1.9rem;
+                            }
+                        }
+                    }
+
+                    h4 {
+                        font-size: 18px;
+                        letter-spacing: 0.2px;
+                        font-weight: 600;
+                        width: 80%;
+                        color: $primaryDark;
+                        line-height: 1.1;
+                        margin: 1.3rem 0 1rem 0;
+                        @media screen and (min-width: 1200px) {
+                            font-size: 24px;
+                            width: 70%;
+                        }
+                    }
+
+                    p {
+                        @include bodyText();
+                        width: 84%;
+                        @media screen and (min-width: 1200px) {
+                            width: 70%;
+                        }
+                    }
+
+                    .link {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 15px;
+                        @media screen and (min-width: 1200px) {
+                            margin-top: 30px;
+                        }
+                        &:hover {
+                             cursor: pointer;
+                             opacity: .7;
+                        }
+                        a {
+                            font-size: 12px;
+                            font-weight: 600;
+                            margin-right: 15px;
+                            @media screen and (min-width: 1200px) {
+                                font-size: 16px;
+                            }
+                        }
+                        svg {
+                            transition: 200ms ease-in;
+                        }
+                        &:hover {
+                            svg {
+                                width: 30px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .right {
+            position: relative;
+            height: 350px;
+            width: 85%;
+            transition: 200ms ease-in;
+            @media screen and (min-width: 768px) {
+                height: 470px;
+                flex: 0.45;
+            }
+            @media screen and (min-width: 1200px) {
+                height: 650px;
+                flex: 0.5;
+                width: 550px;
+            }
+            img {
+                object-fit:cover;
+            }
+        }
+    }
+}

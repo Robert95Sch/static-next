@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.container {
+    background-color: #1e1e1e;
+    padding: 1.3rem 0 2.4rem 0;
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    @media screen and (min-width: 768px) { 
+        padding: 1.3rem 0 2.4rem 0;
+    }
+    .wrapper {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+        max-width: 1200px;
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 95%;
+        }
+        .feature {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: .8rem 0;
+            &:last-child {
+                .featureIcon {
+                    margin-left: -2px;
+                }
+            }
+            .featureIcon {
+                fill: #f1f1f1;
+                font-size: 1.8rem;
+                margin-bottom: 5px;
+                width: 30px;
+                height: 30px;
+            }
+            h3 {
+                color: #f1f1f1;
+                font-weight: 600;
+                margin: 10px 0;
+                font-size: 1.3rem;
+            }
+            p {
+                @include bodyText();
+                color:white;
+                width: 80%;
+            }
+        }
+    }
+}

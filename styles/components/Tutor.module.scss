@@ -1,0 +1,57 @@
+@import '../variables.scss';
+
+.tutor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 12px auto;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        text-align: left;
+        align-items: flex-start;
+    }
+    &:last-child {
+        margin-bottom: 0;
+        
+        @media screen and (min-width: 768px) {
+            margin: 15px auto;
+        }
+    }
+
+    .imageContainer {
+        position: relative;
+        max-width: 500px;
+        height: 230px;
+        width: 100%;
+        transition: 200ms ease-in;
+        @media screen and (min-width: 768px) {
+            height: 200px;
+        }
+        @media screen and (min-width: 1200px) {
+            height: 300px;
+        }
+        img {
+            object-fit: cover;
+        }
+        &:hover { 
+            filter: brightness(110%);
+        }
+
+    }
+
+    .tutorName {
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin: 15px 0 3px 0;
+        
+    }
+
+    .tutorSub {
+        font-weight: 400;
+        font-size: .95rem;
+        color:rgb(173, 173, 173);
+        
+    }
+}

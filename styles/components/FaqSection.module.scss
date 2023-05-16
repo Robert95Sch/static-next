@@ -1,0 +1,54 @@
+@import '../variables.scss';
+
+.container {
+    width: 85%;
+    max-width: 1050px;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+  }
+  
+  .faqItem {
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+  }
+  
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: .95rem;
+    padding: 14px;
+    background-color: #1e1e1e;
+    border: none;
+    color: #f8f8f8;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    fill: #f8f8f8;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .answer {
+    max-height: 0;
+    opacity:0;
+
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    p {
+      @include bodyText();
+    padding: 12px;
+    }
+  }
+  
+  .answerActive {
+    opacity: 1;
+    max-height: 100px;
+    transition: max-height opacity 0.2s ease-in-out;
+  }

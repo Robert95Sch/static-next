@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+    position:relative;
+    margin-bottom: 90px;
+    text-align:center;
+    max-width: 1050px;
+}
+
+.dots {
+    bottom: -40px !important;
+    li {
+        margin: 0 !important;
+    }
+}
+
+.prevArrow {
+    position:absolute;
+    left: -1rem; 
+    bottom:55%;
+    font-size: 1.8rem;
+    z-index: 2;
+    cursor: pointer;
+    svg {
+        fill: #1e1e1e;
+        stroke-width: .1;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 2.5rem;
+        bottom:45%;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 4.5rem;
+        bottom:25%;
+    }
+}
+.nextArrow {
+    position:absolute;
+    right: -1rem; 
+    bottom:55%;
+    font-size: 1.8rem;
+    z-index: 2;
+    cursor: pointer;
+    svg {
+        fill: #1e1e1e;
+        stroke-width: .1;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 2.5rem;
+        bottom:45%;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 4.5rem;
+        bottom:25%;
+    }
+}
+

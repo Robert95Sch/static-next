@@ -1,0 +1,125 @@
+.container {
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .imageContainer{
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-size: cover;
+            background-blend-mode: multiply;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-height: 100vh;
+            animation: zoom 30s infinite;
+
+            &:after {
+                content: "";
+                position:absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0, 0, 0, 0.5);
+            }
+        }
+        .content {
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 58%;
+            width: 100%;
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content:center;
+            h1 {
+                color:white;
+                font-size: 32px;
+                text-align:center;
+                font-weight: 600;
+                letter-spacing: 1px;
+                @media screen and (min-width: 768px) {
+                    font-size: 44px;
+                }
+                @media screen and (min-width: 1200px) {
+                    font-size: 52px;
+                }
+                @media screen and (min-width: 1600px) {
+                    font-size: 58px;
+                }
+            }
+            h4 {
+                font-weight: 400;
+                font-size: 18px;
+                margin-top: 7px;
+                letter-spacing: 1px;
+                color:lightgrey;
+                @media screen and (min-width: 1200px) {
+                    font-size: 24px;
+                    margin-top: .45rem;
+                }
+            }
+            button {
+                outline:none;
+                border:none;
+                background-color: #f1f1f1;
+
+                font-weight: 600;
+                padding: 8px 12px;
+                width:130px;
+                margin-top: 1.2rem;
+                font-size: .95rem;
+
+                cursor: pointer;
+                &:hover {
+                    opacity: .8;
+                }
+                @media screen and (min-width: 768px) {
+                    font-size: 1.05rem;
+                    width: fit-content;
+                    padding: 8px 14px;
+                }
+                @media screen and (min-width: 1200px) {
+                    margin-top: 1.5rem;
+                    font-size: 1.1rem;
+                    padding: 10px 16px;
+                    width: 200px;
+                }
+            }
+            svg { 
+                margin-top: 20vh;
+                fill: lightgrey;
+                stroke: lightgrey;
+                font-size: 2.5rem;
+                cursor: pointer;
+                &:hover {
+                    color:white;
+                }
+            }
+        }
+        .controls {
+            position:absolute;
+            bottom:2rem;
+            left: 1.75rem;
+            display:flex;
+            align-items:center;
+            .playIcon {
+                fill: #f1f1f1;
+                font-size: 2.7rem;
+            }
+            .volumeControls {
+                display:flex;
+                align-items:center;
+                margin-left: 15px;
+                .icon {
+                    fill: #f1f1f1;
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+    }
+}
+
